@@ -1,0 +1,231 @@
+/* --- Variables de Color (Fáciles de modificar) --- */
+:root {
+    --color-oliva: #4A5D23;
+    --color-oliva-oscuro: #2D3B12;
+    --color-fondo: #FAFAF7;
+    --color-texto: #333333;
+    --color-blanco: #FFFFFF;
+}
+
+/* --- Reseteo básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Cinzel', serif;
+}
+
+/* --- Navegación --- */
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--color-blanco);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-oliva);
+}
+
+.enlaces {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.enlaces a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.enlaces a:hover {
+    color: var(--color-oliva);
+}
+
+.btn-menu {
+    background-color: var(--color-oliva);
+    color: var(--color-blanco);
+    padding: 0.6rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-menu:hover {
+    background-color: var(--color-oliva-oscuro);
+}
+
+/* --- Banner Principal --- */
+.hero {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-blanco);
+    padding: 0 20px;
+}
+
+.hero-texto h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-texto p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-principal {
+    background-color: var(--color-oliva);
+    color: var(--color-blanco);
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 50px; /* Botón redondeado para destacar */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s, background-color 0.3s;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background-color: var(--color-oliva-oscuro);
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el ratón */
+}
+
+/* --- Garantías --- */
+.garantias {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: var(--color-oliva);
+    color: var(--color-blanco);
+    padding: 2rem 5%;
+}
+
+.item-garantia {
+    text-align: center;
+    margin: 10px;
+}
+
+.item-garantia strong {
+    font-size: 1.2rem;
+    display: block;
+}
+
+/* --- Tienda / Productos --- */
+.tienda {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.tienda h2 {
+    font-size: 2.5rem;
+    color: var(--color-oliva);
+}
+
+.subtitulo {
+    margin-bottom: 3rem;
+    color: #666;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-producto {
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Asegura que tus fotos se vean perfectas sin deformarse */
+}
+
+.info-producto {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.info-producto h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-producto p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.btn-comprar {
+    background-color: var(--color-oliva);
+    color: var(--color-blanco);
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: var(--color-oliva-oscuro);
+}
+
+/* --- Pie de página --- */
+.pie-pagina {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
